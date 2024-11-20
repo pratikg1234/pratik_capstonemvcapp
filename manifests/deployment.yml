@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: pratikcapstonemvcappgit 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pratikcapstonemvcappgit
+  template:
+    metadata:
+      labels:
+        app: pratikcapstonemvcappgit 
+    spec:
+      containers:
+        - name: pratikcapstonemvcappgit 
+          image: myreg86250.azurecr.io/pratikcapstonemvcappgit
+          ports:
+          - containerPort: 8080
